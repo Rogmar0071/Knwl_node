@@ -100,7 +100,7 @@ describe('ESM: --experimental-package-map', () => {
         '--input-type=module',
         '--eval',
         `import dep from 'dep-a'; console.log(dep);`,
-      ], { cwd: '/tmp' });  // Not in any mapped package
+      ], { cwd: tmpdir.path });  // Not in any mapped package
 
       assert.match(stderr, /ERR_PACKAGE_MAP_EXTERNAL_FILE/);
       assert.notStrictEqual(code, 0, stderr);

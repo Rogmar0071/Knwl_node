@@ -105,7 +105,7 @@ describe('CJS: --experimental-package-map', { concurrency: !process.env.TEST_PAR
         '-e',
         `require('dep-a');`,
       ], {
-        cwd: '/tmp',
+        cwd: tmpdir.path,
         encoding: 'utf8',
       });
 
