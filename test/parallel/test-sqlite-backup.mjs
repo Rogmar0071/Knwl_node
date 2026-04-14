@@ -341,12 +341,10 @@ test('source database is kept alive while a backup is in flight', async (t) => {
   // Nudge the GC aggressively, but the backup must keep the source alive
   // regardless. Without the fix, the source DatabaseSync would be collected
   // and BackupJob::Finalize() would crash the process.
-  if (typeof global.gc === 'function') {
     for (let i = 0; i < 5; i++) {
       global.gc();
       await new Promise((resolve) => setImmediate(resolve));
     }
-  }
 
   const totalPages = await p;
   t.assert.ok(totalPages > 0);
