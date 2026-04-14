@@ -160,7 +160,7 @@ describe('ESM: --experimental-package-map', () => {
       ], { cwd: fixtures.path('package-map/root') });
 
       assert.match(stderr, /ERR_PACKAGE_MAP_INVALID/);
-      assert.match(stderr, /not found/);
+      assert.match(stderr, /no such file or directory/);
       assert.notStrictEqual(code, 0, stderr);
     });
 
