@@ -54,7 +54,7 @@ The stability indexes are as follows:
 >
 > If an experimental feature has reached mainstream adoption such that breaking
 > changes are not realistically possible without ecosystem breakage, it should
-> be considered stable and promoted as soon as possible.
+> be considered stable and either be promoted or be removed after a deprecation cycle.
 
 <!-- separator -->
 
