@@ -183,8 +183,7 @@ class EnvironmentOptions : public Options {
   bool experimental_network_inspection = EXPERIMENTALS_DEFAULT_VALUE;
   bool experimental_worker_inspection = EXPERIMENTALS_DEFAULT_VALUE;
   bool experimental_storage_inspection = EXPERIMENTALS_DEFAULT_VALUE;
-  bool experimental_inspector_network_resource =
-      EXPERIMENTALS_DEFAULT_VALUE;
+  bool experimental_inspector_network_resource = EXPERIMENTALS_DEFAULT_VALUE;
   std::string heap_prof_dir;
   std::string heap_prof_name;
   static const uint64_t kDefaultHeapProfInterval = 512 * 1024;
