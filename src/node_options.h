@@ -112,9 +112,7 @@ class DebugOptions : public Options {
                     std::vector<std::string>* argv) override;
 };
 
-#ifdef NODE_ENABLE_EXPERIMENTALS
-#define EXPERIMENTALS_DEFAULT_VALUE true
-#else
+#ifndef EXPERIMENTALS_DEFAULT_VALUE
 #define EXPERIMENTALS_DEFAULT_VALUE false
 #endif
 

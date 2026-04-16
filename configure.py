@@ -1809,7 +1809,7 @@ def configure_node_cctest_sources(o):
 def configure_node(o):
   if options.dest_os == 'android':
     o['variables']['OS'] = 'android'
-  o['variables']['node_enable_experimentals'] = B(options.enable_all_experimentals)
+  o['variables']['node_enable_experimentals'] = b(options.enable_all_experimentals)
   o['variables']['node_prefix'] = options.prefix
   o['variables']['node_install_npm'] = b(not options.without_npm)
   o['variables']['node_install_corepack'] = b(options.with_corepack)
